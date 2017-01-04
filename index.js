@@ -1,7 +1,13 @@
-var json;
-var data = $.get("https://public-api.wordpress.com/rest/v1/sites/idcdistro.wordpress.com/posts/", function(){
-    json = data.responseJSON
-}).done(()=>{console.log(json)})
+var json
+    posts;
 
-var postContainer = $('#postContainer');
-postContainer.innerHTML = 'hello'
+var data = $.get("/posts", function(){
+    json = data.responseJSON
+}).done(()=>{
+  console.log("hi")
+  generatePosts(json);
+})
+
+function generatePosts(json){
+   // 
+}

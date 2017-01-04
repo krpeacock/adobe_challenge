@@ -4,7 +4,10 @@
 .container {
   max-width: 100%;
   display: flex;
-  align-content: space-around; }
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start; }
 
 .column {
   width: 22%;
