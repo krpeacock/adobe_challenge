@@ -9,6 +9,9 @@
   -webkit-justify-content: flex-start;
   justify-content: flex-start; }
 
+p {
+  word-wrap: break-word; }
+
 .column {
   width: 22%;
   display: inline-flex;

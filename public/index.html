@@ -12,9 +12,30 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
+  <app-main></app-main>
+ 
+  <!-- riot tags -->
+  <script type="riot/tag" src="app-main.tag"></script>
 
-	</div>
-  <script src="js/index.js"></script>
+  <!-- scripts we need -->
+  <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
+  <script src="https://rawgit.com/riot/route/master/dist/route.min.js"></script>
+
+  <!-- mount this app -->
+  <script>
+    var json;
+    var data = $.get("https://public-api.wordpress.com/rest/v1/sites/idcdistro.wordpress.com/posts", function(){
+        json = data.responseJSON
+    }).done(()=>{
+      riot.compile(function() {
+        riot.mount('app-main.tag', {
+          posts : json.posts
+        })
+
+      })
+    })
+  </script>
+
+  <!-- <script src="js/index.js"></script> -->
 </body>
 </html>
