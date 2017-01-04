@@ -1,3 +1,36 @@
-body {
-	text-align: center
+* {
+	max-width: 100vw;
+}
+
+
+.container {
+	max-width: 100%;
+	display: flex;
+	align-content: space-around;
+}
+.column {
+	width: 22%;
+	display: inline-flex;
+  
+	margin: 1%;
+}
+
+.item {
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	padding: 5px;
+	width: 100%;
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+	.column {
+		width: 46%;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.column {
+		width: 96%;
+	}
 }
