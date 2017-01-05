@@ -8,34 +8,19 @@
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
-  <!-- <link rel="stylesheet" href="coral.css"> -->
+  <!-- <link rel="stylesheet" href="css/coral.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <app-main></app-main>
- 
-  <!-- riot tags -->
-  <script type="riot/tag" src="app-main.tag"></script>
-
-  <!-- scripts we need -->
-  <script src="https://rawgit.com/riot/riot/master/riot%2Bcompiler.min.js"></script>
-  <script src="https://rawgit.com/riot/route/master/dist/route.min.js"></script>
-
-  <!-- mount this app -->
-  <script>
-    var json;
-    var data = $.get("https://public-api.wordpress.com/rest/v1/sites/idcdistro.wordpress.com/posts", function(){
-        json = data.responseJSON
-    }).done(()=>{
-      riot.compile(function() {
-        riot.mount('app-main.tag', {
-          posts : json.posts
-        })
-
-      })
-    })
-  </script>
-
-  <!-- <script src="js/index.js"></script> -->
+  <header class="guide-Header">
+    <div class="header-container">
+      <div id="logo"><img src="img/peacock.png" alt=""></div>
+      <h2 id="title">Kyle Peacock <br/>Coding Challenge</h2>
+    </div>
+  </header>
+  <div class="container" data-start="0"></div>
+  
+  <footer></footer>
+  <script src="js/index.js"></script>
 </body>
 </html>
