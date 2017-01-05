@@ -3,12 +3,7 @@
 ### Directions:
 To get started, clone this repository from https://github.com/krpeacock/adobe_challenge.git and navigate into the directory.
 
-Run `npm install` in Terminal to download the required assets from Node Package Manager. (I'm assuming you are on MacOs. Sorry if I'm prejudiced.)
-
-Once the download has finished, run `npm start` to run the application. 
-
-You will be able to view the website in your browser at http://localhost:3000.
-
+Open index.html in your preferred program to interact with the website
 
 
 Here are the terms I was given for this challenge:
